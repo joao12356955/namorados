@@ -1,4 +1,3 @@
-// script.js
 let attempts = 0;
 const maxAttempts = 2;
 
@@ -25,8 +24,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (isValidUser) {
         message.style.color = 'green';
         message.textContent = 'Login bem-sucedido!';
-        // Redirect to another page
-        window.location.href = 'index.html';
+        localStorage.setItem('userName', username); // Save username to localStorage
+        window.location.href = 'index.html'; // Redirect to another page
     } else {
         attempts++;
         message.style.color = 'red';
